@@ -1,0 +1,39 @@
+{
+  "name": "my-i18n-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "downloadEn": "locize download --project-id=8f6dc428-303c-463f-9995-f4957cdcc145 --language=en --ver=latest --clean=true --path=./src/@types/locales",
+    "interface": "i18next-resources-for-ts interface -i ./src/@types/locales -o ./src/@types/resources.d.ts",
+    "update-interface": "npm run downloadEn && npm run interface && rm -rf ./src/@types/locales"
+  },
+  "dependencies": {
+    "i18next": "24.2.2",
+    "i18next-browser-languagedetector": "8.0.4",
+    "i18next-locize-backend": "7.0.3",
+    "i18next-resources-for-ts": "1.5.0",
+    "locize": "3.3.0",
+    "locize-lastused": "4.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "15.4.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  }
+}
