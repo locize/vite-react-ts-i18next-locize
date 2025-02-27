@@ -55,7 +55,7 @@ function App() {
                 setCount(count + 1)
               }}
             >
-              {lngs[lng].nativeName}
+              {lngs[lng].nativeName.split(',')[0]}
             </button>
           )
         })}
