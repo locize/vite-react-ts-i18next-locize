@@ -16,10 +16,7 @@ function App() {
   const [lngs, setLngs] = useState<LngRet>({ en: { nativeName: 'English' }})
 
   useEffect(() => {
-    i18n.services.backendConnector.backend.getLanguages((err: unknown, ret: LngRet) => {
-      if (err) return // TODO: handle err...
-      setLngs(ret)
-    })
+    i18n.services.backendConnector.backend.getLanguages().then((ret: LngRet) => setLngs(ret))
   }, [i18n])
 
   return (
