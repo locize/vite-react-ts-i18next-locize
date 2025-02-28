@@ -9,7 +9,8 @@ const isDev = import.meta.env.DEV
 
 const locizeOptions = {
   projectId: import.meta.env.VITE_LOCIZE_PROJECTID,
-  apiKey: import.meta.env.VITE_LOCIZE_APIKEY // YOU should not expose your apps API key to production!!!
+  apiKey: import.meta.env.VITE_LOCIZE_APIKEY, // YOU should not expose your apps API key to production!!!
+  version: import.meta.env.VITE_LOCIZE_VERSION
 }
 
 if (isDev) {
